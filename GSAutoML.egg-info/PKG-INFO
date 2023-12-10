@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: GSAutoML
-Version: 0.0.1
-Summary: A small example package
-Author-email: Data_Team <youssef.mahmoud@gizasystems.com>
+Version: 0.1
+Summary: GizaAutoML package version 0.1 
+Author-email: Data_Team <mohamed.maher@gizasystems.com>
 License: MIT
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
