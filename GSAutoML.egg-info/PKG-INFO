@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: GSAutoML
+Version: 0.0.1
+Summary: A small example package
+Author-email: Data_Team <youssef.mahmoud@gizasystems.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# GizaAutoML
+
+GizaAutoML is an automated machine learning (AutoML) package designed for univariate time series forecasting. It simplifies the process of building machine learning pipelines by automating key steps, including data preprocessing, feature extraction, algorithm selection, and hyperparameter optimization.
+
+## Table of Contents
+1. [Installation](#installation)
+2. [Package Overview](#package-overview)
+3. [User Manual](#User-manual) 
+3. [Example](#example)
+4. [Contributing](#contributing)
+5. [License](#license)
+
+## 1. Installation <a name="installation"></a>
+
+To use GizaAutoML, install the package using the following command:
+
+```bash
+pip install GizaAutoML
+```
+## 2. Package Overview <a name="package-overview"></a>
+GizaAutoML is tailored for time series forecasting on univariate datasets. It executes the following steps:
+
+- **Data Preprocessing:** Handles missing value imputation.
+- **Feature Extraction:** Extracts features like time, trend, seasonality, and lags.
+- **Algorithm Selection:** Recommends the best 3 algorithms based on the series meta features and the meta features saved in the engine knowledge base.
+- **SMAC Optimization:** Applies SMAC optimization to the recommended algorithms, returning the best-performing model with minimal cost.
+
+## 3. User Manual <a name="user-manual"></a>
+Manual for the GizaAutoML package can be found [HERE](https://github.com/giza-data-team/GizaAutoML/blob/main/docs/user_maual.pdf).
+
+## 4. Example <a name="example"></a>
+
+``` bash
+# Example usage
+from GizaAutoML import AutoSeriesForecaster
+
+# Load your time series data into a DataFrame called 'raw_data'
+auto_ml = AutoSeriesForecaster(raw_dataframe=raw_data, optimization_metric="MAE", time_budget=10, save_results=True, random_seed=1, target_col="Target")
+
+# Fit the model
+pipeline = auto_ml.fit()
+
+# Transform new data
+new_data_transformed = auto_ml.transform(new_data)
+```
+
+## 5. Contributing <a name="contributing"></a>
+We welcome contributions! If you want to contribute to GizaAutoML, please check the **Contributing Guidelines**....
+
+## 6. License <a name="license"></a>
+This project is licensed under ....
+
+**Happy forecasting with GizaAutoML!**
