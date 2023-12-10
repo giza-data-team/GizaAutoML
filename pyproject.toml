@@ -2,7 +2,7 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
-name = "GSAutoML"
+name = "GizaAutoML"
 version = "0.1"
 authors = [
   { name="Data_Team", email="mohamed.maher@gizasystems.com" }
