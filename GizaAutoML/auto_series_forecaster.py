@@ -10,7 +10,7 @@ import pandas as pd
 
 class AutoSeriesForecaster:
     def __init__(self, raw_dataframe,
-                 sorting_metric=RegressionScoringMetricEnum.MAE.name,
+                 optimization_metric=RegressionScoringMetricEnum.MAE.name,
                  time_budget=10,
                  save_results=True,
                  random_seed=1,
@@ -20,7 +20,7 @@ class AutoSeriesForecaster:
                  dataset_instance=None):
         self.dataframe = raw_dataframe
         self.processed_dataframe = processed_dataframe
-        self.sorting_metric = sorting_metric
+        self.sorting_metric = optimization_metric
         self.time_budget = time_budget
         self.target_col = target_col
         self.utils = Utils(series_col=self.target_col)
