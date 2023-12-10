@@ -1,6 +1,6 @@
 import pickle
 from typing import List
-
+from pathlib import Path
 import pandas as pd
 from GizaAutoML.enums.regression_evaluation_metric_enum import RegressionEvaluationMetricEnum
 from GizaAutoML.controller.common.utils import Utils
@@ -39,9 +39,11 @@ class MetaModelAlgorithmsRecommender:
         self.series_meta_features = series_meta_features
 
         # TODO: Enhance this!!!!!
-        with open('GSAutoML/meta_model/meta_model.pkl', 'rb') as f:
+        path = Path(__file__).parent / "meta_model.pkl"
+        with path.open('rb') as f:
             self.meta_model = pickle.load(f)
-        with open('GSAutoML/meta_model/univariate_meta_features_le.pkl', 'rb') as f:
+        path_2 = Path(__file__).parent / "univariate_meta_features_le.pkl"
+        with path_2.open('rb') as f:
             self.label_encoders_dict = pickle.load(f)
         self.sorting_metric = sorting_metric
         self.is_forecast = is_forecast
