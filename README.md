@@ -57,12 +57,6 @@ import pandas as pd
 # Assuming 'Timestamp' is the name of your timestamp column
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 ```
-## 5. Web UI for Testing <a name="web-ui"></a>
-
-GizaAutoML provides a web-based user interface for testing the engine. You can access the web UI by navigating to the following IP address: [http://172.178.116.34:8050/](http://172.178.116.34:8050/).
-
-This web interface allows you to interactively test the capabilities of the GizaAutoML engine, providing a convenient way to explore and evaluate its functionality.
-The dashboard includes informative visualization charts, offering insights into the performance of the forecasting models.
 
 ## 5. Contributing <a name="contributing"></a>
 We welcome contributions! If you want to contribute to GizaAutoML, please check the **Contributing Guidelines**
